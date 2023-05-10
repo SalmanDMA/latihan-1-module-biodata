@@ -1,0 +1,16 @@
+{
+ "name": "express-js-pertemuan-2-biodata",
+ "version": "1.0.0",
+ "description": "",
+ "main": "app.js",
+ "scripts": {
+  "serve": "node app.js"
+ },
+ "keywords": [],
+ "author": "",
+ "license": "ISC",
+ "dependencies": {
+  "dotenv": "^16.0.3",
+  "express": "^4.18.2"
+ }
+}

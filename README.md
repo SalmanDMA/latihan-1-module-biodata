@@ -1,14 +1,5 @@
-# Proyek : Latihan Pertama Node JS
+# Hallo Selamat datang !!!
 
-1. **Deskripsi**
-
-   Merupakan latihan pertama dari Pesilat untuk membuat file pertama Node JS
-   Happy Fun Coder 😊
-
-2. **Teknologi**
-
-   Teknologi yang sebagai berikut :
-
-   - Node Js
+Repo ini merupakan kumpulan tugas yang di berikan oleh Pesilat, silahkan buka sesuai dengan apa yang kalian butuhkan
 
 Selamat melihat dan bersenang-senang !
