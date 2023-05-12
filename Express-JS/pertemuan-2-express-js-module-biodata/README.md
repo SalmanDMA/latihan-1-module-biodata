@@ -16,7 +16,10 @@
 
 3. **Contoh Penggunaan**
 
-   Paste url ini : http://[db-name]:[port]/biodata?name=[name]&place=[place]&birthOfDate=[birthOfDate]&address=[address]
+   Paste url ini : http://[db-name]:[port]/biodata?name=[name]&tempat-lahir=[tempat-lahir]&tanggal-lahir=[tanggal-lahir]&alamat=[alamat]
+
+4. **Example**  
+   http://localhost:3000/biodata?name=susi&tempat-lahir=wonosobo&tanggal-lahir=12081990&alamat=Jl.%20Gatot%20Subroto%20No.%2006
 
 > Notes : jangan lupa jalankan servernya dan sesuaikan port, db-name, dan req.querynya
 
