@@ -43,6 +43,11 @@ app.put('/biodata/:id', (req, res) => {
  profilePesilat.update(req, res);
 });
 
+// update only one field a profile pesilat with an id
+app.patch('/biodata/:id', (req, res) => {
+ profilePesilat.patch(req, res);
+});
+
 // delete a profile pesilat with an id
 app.delete('/biodata/:id', (req, res) => {
  profilePesilat.delete(req, res);
