@@ -2,7 +2,7 @@
  "development": {
   "username": "root",
   "password": null,
-  "database": "travel-api",
+  "database": "travel_api_db",
   "host": "127.0.0.1",
   "dialect": "mysql"
  },
