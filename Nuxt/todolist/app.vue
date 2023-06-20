@@ -1,19 +1,13 @@
 <template>
  <div class="container">
   <h1 class="mt-3">Todo List</h1>
-  <div class="list-task">
+  <div class="list-task" :class="{ 'd-flex gap-3 flex-wrap': isGrid }">
    <p v-if="tasks.length === 0" class="text-muted">Belum ada task</p>
-   <div class="item-task d-flex align-items-start border-bottom pt-3 pb-4" v-for="(task, index) of tasks" :key="index">
-    <input type="checkbox" name="status" :id="'task-' + index" class="me-2 mt-2" v-model="task.isDone" />
-    <div class="d-flex flex-column">
-     <div class="title-task mb-1" :class="{ 'text-decoration-line-through': task.isDone }">{{ task.title }}</div>
-     <div class="description-task small text-muted">{{ task.description }}</div>
-     <a href="#" class="add-button" @click="deleteTask(index)">Delete</a>
-    </div>
-   </div>
+   <CardItem :tasks="tasks" :isGrid="isGrid" />
   </div>
   <div class="action py-2">
    <a href="#" class="add-button" v-if="!isCreating" @click="isCreating = true">Add Task</a>
+   <a href="#" class="add-button ms-3" v-if="!isCreating" @click="isGrid = !isGrid">Grid Task</a>
    <div class="add-card" v-if="isCreating">
     <div class="card border-0 mb-2">
      <div class="card-body d-flex flex-column p-0">
@@ -33,8 +27,12 @@
 <script>
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
+import CardItem from './components/Card/CardItem.vue';
 
 export default {
+ components: {
+  CardItem,
+ },
  head: {
   title: 'Todo List',
  },
@@ -44,13 +42,14 @@ export default {
    tasks: [
     {
      title: 'Task 1',
-     description: 'ini deskripsi',
+     description: 'ini deskripsi 1',
      isDone: false,
     },
    ],
    isCreating: false,
    titleValue: '',
    descriptionValue: '',
+   isGrid: false,
   };
  },
  methods: {
@@ -70,9 +69,6 @@ export default {
    this.titleValue = '';
    this.descriptionValue = '';
    this.isCreating = false;
-  },
-  deleteTask(index) {
-   this.tasks.splice(index, 1);
   },
  },
 };
